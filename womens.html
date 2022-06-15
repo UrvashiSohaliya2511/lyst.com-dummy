@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="product.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    
+  </head>
+   <body>
+   
+   <div id="navbar" class="header" data-scroll>
+     
+        <div>
+          
+            <p>CN-US$</p>
+            <select id="help">
+              <option value="">Help</option>
+              <option value="Help center">Help center</option>
+              <option value="Contact us">Contact us</option>
+              <option value="About us">About us</option>
+              <option value="Careers">Careers</option>
+            </select>
+            <p><a href=signin.html">Sign in</a></p>
+            <p><a href=signup.html">Join</a></p>
+          </div>
+      <div>
+          <i class="fa fa-search" id="search_icon"></i>
+            <img  alt="Lyst" id="logo" src="https://static.lystit.com/static/n/pr_campaigns/year_in_fashion_2020/images/logo.a9c5dfdd1a8b.png"/>
+           <i class="material-icons" id="person_icon" style="font-size:36px;">person_outline</i>
+            <div id="menu_icon" onclick="redirect(this)">
+            <div class="line1 "></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <div class="line4"></div>
+          </div>
+          <p class="option"><a href="womens.html">WOMEN</a></p>
+          <p class="option"><a href="mens.html">MEN</a></p>
+          <input id="search" type="search" placeholder='SEARCH (E.G."ACNE JEANS")' icon="search"/>
+          <i class="fa fa-close" style="font-size: 36px" id="close_search"></i>
+        </div>
+      </div>
+      <div id="products">
+        <div><a>Clothing</a>
+        <ul id="clothing">
+          <li><a>All Clothing</a></li>
+          <li><a>Beachwear and swimwear outfits</a></li>
+          <li><a>Coats</a></li>
+          <li><a>Dresses</a></li>
+          <li><a>Hosiery</a></li>
+          <li><a>Jackets</a></li>
+          <li><a>Jeans</a></li>
+          <li><a>Jumpsuits and rompers</a></li>
+          <li><a>Sweaters and knitwear</a></li>
+          <li><a>Lingerie</a></li>
+          <li><a>Nightwear and sleepwear</a></li>
+          <li><a>+More</a></li>
+        </ul>
+        </div>
+        <div><a>Shoes</a></div>
+        <div><a>Accessories</a></div>
+        <div><a>Bags</a></div>
+        <div><a>Jewelry</a></div>
+        <div><a>Brands</a></div>
+        <div><a>All Women's</a></div>
+        <div><a>
+          <i class="fa fa-tag fa-rotate-90"style="font-size: 17px ;color:#f9302d" id=""></i>
+          Sale</a></div>
+      </div>
+      <hr color="black" />
+    </body>
+</html>
+<script>
+  
+   
+    function redirect(x) {
+      x.classList.toggle("change");
+  }
+
+document.querySelector("#search_icon").addEventListener("click",display_search);
+function display_search() {
+  document.querySelector("#search").style.display="block";
+  document.querySelector("#close_search").style.display="block";
+  document.querySelector("#navbar").style.height="80px";
+}
+
+document.querySelector("#close_search").addEventListener("click",close_search);
+function close_search(){
+    document.querySelector("#search").style.display="none";
+  document.querySelector("#close_search").style.display="none";
+  document.querySelector("#navbar").style.height="40px";
+}
+  </script>

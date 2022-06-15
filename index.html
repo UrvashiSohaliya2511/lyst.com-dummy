@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    
+  </head>
+   <body>
+   
+   <div id="navbar" class="header" data-scroll>
+     
+        <div>
+          
+            <p>CN-US$</p>
+            <p id="help">Help</p>
+            <div  class="helplist arrow-top">
+              <span class="close"></span>
+              <a href="#">Help Center</a>
+              <hr color="black" />
+              <a href="#">Contact us</a>
+                <hr color="black" />
+              <a href="#">About us</a>
+               <hr color="black" />
+              <a href="#">Careers</a>
+               <hr color="black" />
+              </div>
+            <p><a href=signin.html">Sign in</a></p>
+            <p><a href=signup.html">Join</a></p>
+             
+        </div>
+        
+        <div>
+          <i class="fa fa-search" id="search_icon"></i>
+          <img  alt="Lyst" id="logo" src="https://static.lystit.com/static/n/pr_campaigns/year_in_fashion_2020/images/logo.a9c5dfdd1a8b.png"/>
+           <i class="material-icons" id="person_icon" style="font-size:36px;">person_outline</i>
+            <div id="menu_icon" onclick="redirect(this)">
+            <div class="line1 "></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <div class="line4"></div>
+           
+          </div>
+          <p class="option"><a href="womens.html">WOMEN</a></p>
+          <p class="option"><a href="mens.html">MEN</a></p>
+          <input id="search" type="search" placeholder='SEARCH (E.G."ACNE JEANS")' icon="search"/>
+          <i class="fa fa-close" style="font-size: 36px" id="close_search"></i>
+        </div>
+      </div>
+      <hr color="black" />
+    <div id="main_image">
+      <img
+        src="https://cdna.lystit.com/cms/ENG_header_XL_9f9e2af236_615828663f.jpg"
+        alt=""
+      />
+      <hr id="line" color="black" />
+    </div>
+
+    <div id="first_layout"></div>
+
+    <div id="second_layout">
+      <div></div>
+      <div></div>
+    </div>
+    <div id="third_layout">
+      <div></div>
+      <div></div>
+      <div></div>
+      </div>
+    <div id="fourth_layout">
+     <div>
+       <div>
+          <h2>1</p>
+          <h4>the biggest selection</h4>
+          <p>Shop over 12,000 brands and stores in one place.</p>
+          <p>
+            Find exactly what you want with powerful search and personal
+            recommendations.
+          </p>
+        </div>
+        <div>
+          <h2>2</h2>
+          <h4>the hottest products</h4>
+          <p>See what's new and what's trending.
+           <p>Hit the heart to receive alerts on the latest drops from your
+            favourite brands.</p> 
+          </p>
+        </div>
+        <div>
+          <h2>3</h2>
+          <h4>the best prices</h4>
+          <p>Compare prices and shipping <br>options across thousands of stores.</p>
+          <p>Lyst members are notified when an item goes on sale.</p>
+        </div>
+      </div>
+      <div>
+        <p>
+          sign up for smarter shopping
+        </p>
+        <button>Join -></button>
+    </div>
+    </div>
+    <div id="fifth_layout">
+      <div> <h1>most wanted</h1></div>
+      <div>
+        <a>zebra-print dresses</a>
+        <a>Asymmetrical Shorts</a>
+        <a>Mesh Ballet Flats</a>
+        <a>Clark's Wallabees</a>
+        <a>Linen Coats</a>
+        <a>Nike Sb Dunk Sneakers</a>
+        <a>Satin Short Sleeve Shirts</a>
+        <a>Common Projects Derby Shoes</a>
+        <a>Hawaiian</a>
+        <a>Rick Owens Geobasket Sneakers</a>
+      </div>
+     
+    </div>
+    <div id="end">
+      <div></div>
+      <div></div>
+    </div>
+    
+  </body>
+</html>
+<script>
+  // for nav bar
+  ScrollOut({
+    cssProps: true,
+    threshold: 0.2
+    });
+   
+    function redirect(x) {
+      x.classList.toggle("change")
+      // window.location.href="womens.html"
+    }
+
+document.querySelector("#search_icon").addEventListener("click",display_search);
+function display_search() {
+  
+  document.querySelector("#search").style.display="block";
+  document.querySelector("#close_search").style.display="block";
+  document.querySelector("#navbar").style.height="80px";
+}
+
+document.querySelector("#close_search").addEventListener("click",close_search);
+function close_search(){
+    document.querySelector("#search").style.display="none";
+  document.querySelector("#close_search").style.display="none";
+  document.querySelector("#navbar").style.height="40px";
+}
+document.querySelector("#search").addEventListener("click",changeborder);
+function changeborder(){
+  
+  document.querySelector("#search").style.border="1px solid #8735ea"
+  document.querySelector("#search").style.backgroundColor="transparent"
+}
+document.querySelector("#help").addEventListener("click", displaybar);
+function displaybar(){
+document.querySelector(".helplist").style.display="inline-block";
+let open=document.querySelector(".helplist");
+window.onclick = function(event){
+  if(event.target ===open){
+  document.querySelector(".helplist").style.display="none";
+  }
+}
+}
+
+  </script>
