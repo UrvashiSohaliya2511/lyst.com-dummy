@@ -1,10 +1,10 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: inherit;
 }
 
 #navbar {
-  border: 1px solid;
   height: 80px;
   padding: 1%;
 }
@@ -35,8 +35,7 @@
   color: white;
 }
 #search {
-  width: 78%;
-
+  width: 76%;
   background: url(https://icons.veryicon.com/png/o/application/wq/search-171.png);
   background-repeat: no-repeat;
   background-size: 20px;
@@ -44,7 +43,11 @@
   padding: 1% 4% 1% 4%;
   font-weight: bold;
   border: 1px solid;
-  font-size: 15px;
+  font-size: 16px;
+}
+input::placeholder {
+  color: rgb(170, 170, 170);
+  font-weight: 1px;
 }
 #navbar div:nth-child(1) p {
   margin-left: 1%;
@@ -54,4 +57,74 @@
 #option {
   color: #626262;
   font-weight: bold;
+
+  margin-top: 1%;
+}
+#main_image img {
+  width: 100%;
+  background-color: #f2f2f2;
+}
+hr {
+  border: none;
+  height: 1px;
+}
+#line {
+  margin-top: -9px;
+}
+#second_layout {
+  margin-top: 5%;
+}
+#second_layout div {
+  border: 1px solid black;
+  height: 300px;
+}
+#third_layout {
+  margin-top: 8%;
+}
+#third_layout div {
+  border: 1px solid black;
+  height: 365px;
+}
+#fourth_layout {
+  margin-top: 5%;
+  display: flex;
+  border: 1px solid black;
+}
+#fourth_layout > div {
+  border: 1px solid black;
+}
+#fourth_layout > div:nth-child(1) {
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  grid-template-rows: repeat(3, auto);
+  width: 900px;
+  justify-content: center;
+  padding: 50px 0px 50px 0px;
+}
+#fourth_layout > div:nth-child(2) {
+  width: 360px;
+}
+#fourth_layout > div:nth-child(1) > div {
+  padding: 0 30px 0 30px;
+  flex: 1;
+}
+#fourth_layout > div:nth-child(1) > div > h2 {
+  display: inline-block;
+  font-size: 110px;
+  font-weight: 700px;
+  font-style: normal;
+}
+#fourth_layout > div:nth-child(1) > div > h4 {
+  font-size: 32px;
+  text-transform: uppercase;
+  line-height: 0.9;
+  letter-spacing: 0em;
+}
+#fourth_layout > div:nth-child(1) > div > p {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+  display: block;
+  font-style: space;
+  margin: 1em 0px 1em 0px;
 }
